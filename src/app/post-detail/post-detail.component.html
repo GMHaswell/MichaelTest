@@ -1,0 +1,12 @@
+<div class="post-container" *ngIf="post">
+	<h1>Post #{{ post.id }} - {{ post.title }}</h1>
+	<p>
+		{{ post.body }}
+	</p>
+</div>
+<div *ngIf="!post">
+	<p>
+		No post by this ID exists.
+	</p>
+</div>
+<button type="button" (click)="goBack()">Back</button>

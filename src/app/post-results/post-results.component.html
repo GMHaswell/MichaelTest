@@ -1,0 +1,35 @@
+<table>
+	<tr>
+		<th>
+			Post ID
+		</th>
+		<th>
+			User ID
+		</th>
+		<th>
+			Title
+		</th>
+		<th>
+			Body
+		</th>
+	</tr>
+	<ng-container *ngIf="posts.length">
+		<tr *ngFor="let post of posts" routerLink="/posts/{{post.id}}">
+			<td>
+				{{ post.id }}
+			</td>
+			<td>
+				{{ post.userId }}
+			</td>
+			<td>
+				{{ post.title }}
+			</td>
+			<td>
+				{{ post.body }}
+			</td>
+		</tr>
+	</ng-container>
+</table>
+<div class="no-results" *ngIf="posts.length === 0">
+	No results.
+</div>

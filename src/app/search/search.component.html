@@ -1,0 +1,13 @@
+<div>
+	<h3>
+		Posts Search
+	</h3>
+	<form>
+		<label>User ID:
+			<input [(ngModel)]="userId" [ngModelOptions]="{standalone: true}" placeholder="All Posts">
+		</label>
+		<button type="submit" (click)="onSearch()">Search</button>
+	</form>
+	<div style="margin-bottom: 20px"></div>
+	<app-post-results [posts]="posts"></app-post-results>
+</div>
